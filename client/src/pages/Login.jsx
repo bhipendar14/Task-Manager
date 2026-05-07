@@ -21,8 +21,9 @@ export default function Login({ setUser }) {
   };
 
   return (
-    <div className="flex items-center justify-center" style={{ minHeight: "80vh" }}>
-      <div className="glass-card" style={{ width: "100%", maxWidth: "400px" }}>
+    <div className="login-container" style={{ minHeight: "80vh", display: "flex", alignItems: "center", justifyContent: "center", gap: "4rem", flexWrap: "wrap", padding: "2rem" }}>
+      {/* Left Side: Login Form */}
+      <div className="glass-card" style={{ width: "100%", maxWidth: "400px", flex: "1 1 350px" }}>
         <div className="text-center mb-6">
           <h2 className="flex items-center justify-center gap-2">
             {isLogin ? <LogIn size={24} /> : <UserPlus size={24} />}
@@ -103,6 +104,23 @@ export default function Login({ setUser }) {
           >
             {isLogin ? "Sign Up" : "Log In"}
           </button>
+        </div>
+      </div>
+
+      {/* Right Side: Demo Credentials */}
+      <div style={{ flex: "1 1 350px", maxWidth: "500px", color: "var(--text)" }}>
+        <h1 style={{ fontSize: "3.5rem", marginBottom: "2rem", letterSpacing: "2px", fontWeight: "300" }}>TASK MANAGER</h1>
+        
+        <div style={{ marginBottom: "1.5rem" }}>
+          <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem" }}>Admin</h3>
+          <p style={{ margin: "0.25rem 0", color: "var(--text-muted)" }}>email - bhipendarkumar31@gmail.com</p>
+          <p style={{ margin: 0, color: "var(--text-muted)" }}>password - haru0314</p>
+        </div>
+
+        <div>
+          <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem" }}>Employee</h3>
+          <p style={{ margin: "0.25rem 0", color: "var(--text-muted)" }}>email - rahul@gmail.com</p>
+          <p style={{ margin: 0, color: "var(--text-muted)" }}>password - haru0314</p>
         </div>
       </div>
     </div>
