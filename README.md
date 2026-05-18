@@ -4,7 +4,7 @@ A full-stack, responsive project management application with role-based access c
 
 ## 🚀 Live Demo
 
-- **Frontend (Vercel)**: [https://task-manager-bhipendar-31.vercel.app/](https://task-manager-bhipendar-31.vercel.app/)
+- **Frontend (Vercel)**: [https://task-manager-demo-bh.vercel.app/](https://task-manager-demo-bh.vercel.app/)
 - **Backend API (Render)**: [https://task-manager-bgdk.onrender.com](https://task-manager-bgdk.onrender.com)
 
 ### Demo Credentials
