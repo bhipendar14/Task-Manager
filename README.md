@@ -1,48 +1,69 @@
 # Team Task Manager
 
-**Live Demo**:
-- Backend API (Render): https://task-manager-bgdk.onrender.com
+A full-stack, responsive project management application with role-based access control. Admins can create projects and assign tasks, while members can track and update their progress. Built with a modern glassmorphism UI.
 
-A full-stack project management application with role-based access control, allowing admins to create projects and assign tasks, while members can track and update their progress.
+## 🚀 Live Demo
 
-## Tech Stack
+- **Frontend (Vercel)**: [https://task-manager-bhipendar-31.vercel.app/](https://task-manager-bhipendar-31.vercel.app/)
+- **Backend API (Render)**: [https://task-manager-bgdk.onrender.com](https://task-manager-bgdk.onrender.com)
+
+### Demo Credentials
+
+Feel free to use the demo credentials below to test the application, or simply click the quick login buttons on the login page:
+
+**Admin Account:**
+- **Email:** `bhipendarkumar31@gmail.com`
+- **Password:** `haru0314`
+
+**Employee Account:**
+- **Email:** `rahul@gmail.com`
+- **Password:** `haru0314`
+
+## 🛠️ Tech Stack
+
 - **Frontend**: React (Vite), React Router, Lucide-React for icons, Custom CSS (Glassmorphism).
-- **Backend**: Node.js, Express.js, MongoDB (Mongoose), JWT for secure authentication, bcryptjs for password hashing.
+- **Backend**: Node.js, Express.js, MongoDB (Mongoose).
+- **Security**: JWT for secure authentication, bcryptjs for password hashing.
+- **Deployment**: Vercel (Frontend), Render (Backend).
 
-## Features
-- **Authentication**: Secure Signup/Login with JWT.
-- **Roles**: Admin vs. Member permissions. Admins can create and delete tasks/projects; Members can only view and update their own assigned tasks.
-- **Dashboard**: Real-time statistics showing Total, In Progress, Completed, and Overdue tasks.
-- **Task Management**: Clear logical buttons to Start Progress or Complete a Task with visual confirmations.
+## ✨ Features
 
-## Local Setup
+- **Authentication**: Secure Signup/Login with JWT-based session management.
+- **Role-Based Access Control**:
+  - **Admins**: Can create/delete tasks and projects, assign tasks to members, and view overall progress.
+  - **Members**: Can view their assigned tasks and update task status (To Do -> In Progress -> Completed).
+- **Interactive Dashboard**: Real-time statistics showing Total, In Progress, Completed, and Overdue tasks.
+- **Modern UI**: Clean, glassmorphism-inspired design with responsive layout and visual feedback.
 
-### 1. Database
-Create a MongoDB Atlas cluster and get the connection string. Add it to a `.env` file in the `server` folder:
-```
+## 💻 Local Setup Instructions
+
+### 1. Database Configuration
+Create a MongoDB Atlas cluster and get your connection string. Add it to a `.env` file in the `server` folder along with a secret key:
+```env
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 ```
 
-### 2. Run Backend
+### 2. Backend Setup
+Open a terminal and run the following commands:
 ```bash
 cd server
 npm install
 npm run dev
 ```
+The server will start on `http://localhost:5000`.
 
-### 3. Run Frontend
+### 3. Frontend Setup
 Open a new terminal window:
 ```bash
 cd client
 npm install
+# Optional: Set VITE_API_URL in a .env file to point to your local/remote backend
 npm run dev
 ```
+The client will start on `http://localhost:5173`.
 
-## Deployment on Vercel
-1. Upload the repository to GitHub.
-2. Go to Vercel and import the repository.
-3. Vercel will likely ask you to deploy the `client` folder.
-4. Set the Framework Preset to `Vite`.
-5. For the backend, you can deploy the `server` folder to a service like Render or set up a custom `vercel.json` if deploying as Vercel serverless functions.
-6. Make sure to add `VITE_API_URL` to your Vercel Environment Variables if you are hosting the backend elsewhere.
+## 🌐 Deployment Details
+- The backend is deployed on Render and exposes RESTful API endpoints.
+- The frontend is deployed on Vercel as a Vite SPA.
+- CORS is configured to allow secure communication between the frontend and backend.

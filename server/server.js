@@ -17,4 +17,11 @@ app.use("/api/users", require("./routes/users"));
 app.use("/api/projects", require("./routes/projects"));
 app.use("/api/tasks", require("./routes/tasks"));
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Task Manager API is running successfully!",
+    status: "active"
+  });
+});
+
 app.listen(5000, () => console.log("Server running on 5000"));

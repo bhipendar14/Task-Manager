@@ -107,20 +107,38 @@ export default function Login({ setUser }) {
         </div>
       </div>
 
-      {/* Right Side: Demo Credentials */}
+      {/* Right Side: Demo Information */}
       <div style={{ flex: "1 1 350px", maxWidth: "500px", color: "var(--text)" }}>
         <h1 style={{ fontSize: "3.5rem", marginBottom: "2rem", letterSpacing: "2px", fontWeight: "300" }}>TASK MANAGER</h1>
+        <p style={{ marginBottom: "2rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
+          Welcome to the Team Task Manager. This is a full-stack project management application with role-based access control.
+          You can create a new account or use the quick login buttons below to explore the demo.
+        </p>
         
-        <div style={{ marginBottom: "1.5rem" }}>
-          <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem" }}>Admin</h3>
-          <p style={{ margin: "0.25rem 0", color: "var(--text-muted)" }}>email - bhipendarkumar31@gmail.com</p>
-          <p style={{ margin: 0, color: "var(--text-muted)" }}>password - haru0314</p>
-        </div>
-
-        <div>
-          <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem" }}>Employee</h3>
-          <p style={{ margin: "0.25rem 0", color: "var(--text-muted)" }}>email - rahul@gmail.com</p>
-          <p style={{ margin: 0, color: "var(--text-muted)" }}>password - haru0314</p>
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          <button 
+            type="button" 
+            className="btn btn-outline"
+            style={{ flex: 1, minWidth: "150px" }}
+            onClick={() => {
+              setIsLogin(true);
+              setFormData({ ...formData, email: "bhipendarkumar31@gmail.com", password: "haru0314" });
+            }}
+          >
+            Demo Admin
+          </button>
+          
+          <button 
+            type="button" 
+            className="btn btn-outline"
+            style={{ flex: 1, minWidth: "150px" }}
+            onClick={() => {
+              setIsLogin(true);
+              setFormData({ ...formData, email: "rahul@gmail.com", password: "haru0314" });
+            }}
+          >
+            Demo Employee
+          </button>
         </div>
       </div>
     </div>
